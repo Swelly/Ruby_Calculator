@@ -107,4 +107,6 @@ operator = gets.chomp.downcase
     when 'sphere volume'
       r = get_radius
       puts "The sphere's volume is " + sphere_volume(r).to_s
+    else
+      puts "Unrecognized operation. Please try again."
   end
