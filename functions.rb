@@ -76,37 +76,35 @@ puts "Please express the operation you wish to perform:
 operator = gets.chomp.downcase
   case operator
     when '+' #Need to make these work without repetition of code below
-    when 'addition'
+    when 'add'
       number_1, number_2 = dual_prompt
-      puts add(number_1, number_2)
+      puts "The sum is " + add(number_1, number_2).to_s
     when '-'
     when 'subtract'
       number_1, number_2 = dual_prompt
-      puts subtract(number_1, number_2)
+      puts "The difference is " + subtract(number_1, number_2).to_s
     when '*'
     when 'multiply'
       number_1, number_2 = dual_prompt
-      puts multiply(number_1, number_2)
+      puts "The product is " + multiply(number_1, number_2).to_s
     when '**'
     when 'exponent'
       number_1, number_2 = dual_prompt
-      puts exponent
+      puts "The result is " + exponent(number_1, number_2).to_s
     when '/'
     when 'divide'
       number_1, number_2 = dual_prompt
-      puts divide(number_1, number_2)
+      puts "The quotient is " + divide(number_1, number_2).to_s
     when 'area'
       number_1, number_2 = dual_prompt
-      puts area(number_1, number_2)
+      puts "The area equals " + area(number_1, number_2).to_s
     when 'circle area'
       r = get_radius
-      puts "The area is " + circle_area(r).to_s
+      puts "The circle's area is " + circle_area(r).to_s
     when 'volume'
       number_1, number_2, number_3 = l_w_h_prompt
-      puts volume(number_1, number_2, number_3)
+      puts volume(number_1, number_2, number_3).to_s
     when 'sphere volume'
       r = get_radius
-      puts "The volume is " + sphere_volume(r).to_s
-    else
-      puts "I do not recognize the the requested operation"
+      puts "The sphere's volume is " + sphere_volume(r).to_s
   end
